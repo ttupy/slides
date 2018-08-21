@@ -114,7 +114,7 @@
 - Saadud komponendid korrutatakse
  - näiteks: ``13 * 1 * 1 => 13p``.
 - Kui stiil on korrast ära, siis on kokku 0p
-- Kui ülesanne pole ette näiatud, siis on kokku 0p
+- Kui ülesanne pole ette näidatud, siis on kokku 0p
 
 @ulend
 
@@ -128,7 +128,7 @@
  - Kasutame aines kahte kontrolli:
   - [PEP 8](https://www.python.org/dev/peps/pep-0008/) - Üldine koodistiil
   - [PEP 257](https://www.python.org/dev/peps/pep-0257/) - Dokumenteerimise stiil
- - Kõik funktsioonid, klassid, meetodid jms peavad olema kommenteeritud
+ - Funktsioonid, klassid, meetodid jms peavad olema kommenteeritud
   - Sisu kontrollime ka ("asd" võib automaattesterile sobida, aga õppejõule mitte!)
  - Automaattester annab stiilivigadest teada
 
