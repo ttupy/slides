@@ -44,15 +44,21 @@
 
 ## Ülesanded
 
+@ul
+
 - Iga nädal kaks ülesannet
  - PR ülesanne tunnis tegemiseks
  - EX ülesanne kodus lahendamiseks
 - Automaattestimine
 - Kokku 15 nädalat
 
+@ulend
+
 ---
 
 ## Ülesannete tähtajad
+
+@ul
 
 - PR ülesanne praktikumi lõpus
  - Hiljem saab 0p
@@ -64,21 +70,42 @@
 - kuni 17. september 23:59 saab kuni 50%
 - alates 18. septembrist 0p
 
+@ulend
+
 ---
 
 ## Ülesande esitamine
+
+@ul
 
 - Ülesande lahendus laetakse Giti
 - Tudeng saab esitatud ülesande kohta TTÜ emailile tagasisidet (näiteks 80% punktidest)
 - Lahendust võib üles laadida (esitada) lõpmatu arv kordi (kui pole öeldud teisiti)
 - Arvesse läheb parim (kui pole öeldud teisiti)
 - Punktid lähevad arvesse alles pärast seda, kui lahendus on õppejõule ette näidatud
+
+@ulend
+
+---
+
+## Ülesande ettenäitamine
+
+@ul
+
 - Ettenäitamisel veendume, et tudeng saab **enda** kirjutatud koodist aru
-- Samuti anname ettenäitamisel tudengi koodile tagasisidet
+- Ettenäitamisel anname tudengi koodile tagasisidet
+- Ettenäitamise eest on (väga harva) võimalik saada trahvpunkte
+ - kui tudeng ei saa **enda** koodist aru
+ - kood on väga ebapraktiline
+- Tavaliselt antakse tudengile võimalus koodi parandada
+
+@ulend
 
 ---
 
 ## Ülesande punktid
+
+@ul
 
 - Lõpptulemus sõltub kolmest komponendist:
  - automaattestid (100% =>15p; 80% => 13p)
@@ -89,21 +116,29 @@
 - Kui stiil on korrast ära, siis on kokku 0p
 - Kui ülesanne pole ette näiatud, siis on kokku 0p
 
+@ulend
+
 ---
 
 ## Automaatne stiilikontroll
 
+@ul
+
  - Kõik lahendused peavad vastama stiilinõuetele
  - Kasutame aines kahte kontrolli:
-  - PEP 8: https://www.python.org/dev/peps/pep-0008/ - Üldine koodistiil
-  - PEP 257: https://www.python.org/dev/peps/pep-0257/ - Dokumenteerimise stiil
+  - [PEP 8](https://www.python.org/dev/peps/pep-0008/) - Üldine koodistiil
+  - [PEP 257](https://www.python.org/dev/peps/pep-0257/) - Dokumenteerimise stiil
  - Kõik funktsioonid, klassid, meetodid jms peavad olema kommenteeritud
   - Sisu kontrollime ka ("asd" võib automaattesterile sobida, aga õppejõule mitte!)
  - Automaattester annab stiilivigadest teada
 
+@ulend
+
 ---
 
 ## Punktid kokku
+
+@ul
 
 - Ülesanded 400p
  - PR ülesanded 15 x 5p = 75p
@@ -114,9 +149,13 @@
 - Kui süva ülesandeid ei tee, siis kokku 900p
 - 901p -> "5", 801p -> "4", ... 501p -> "1", <501p -> "0" 
 
+@ulend
+
 ---
 
 ## Tunnikontrollid
+
+@ul
 
 * 5 nädalal tunnikontroll (15-20min)
   * antakse 5 ülesannet
@@ -125,9 +164,13 @@
 * 10 nädalal kontrolltöö (terve praktikum)
   * vähemalt pool tuleb ära teha (50%)
 
+@ulend
+
 ---
 
 ## Eksam
+
+@ul
 
 - **Eksamieeldus:**
  - vähemalt 200p
@@ -136,6 +179,8 @@
 - Lahendatakse ülesandeid
 - Interneti kasutamine pole lubatud
 - Aega 4h
+
+@ulend
 
 ---
 
