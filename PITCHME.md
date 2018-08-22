@@ -94,7 +94,7 @@
 
 - Ettenäitamisel veendume, et tudeng saab **enda** kirjutatud koodist aru
 - Ettenäitamisel anname tudengi koodile tagasisidet
-- Ettenäitamise eest on (väga harva) võimalik saada trahvpunkte
+- Ettenäitamise eest on (väga harva) võimalik saada trahvipunkte
  - kui tudeng ei saa **enda** koodist aru
  - kood on väga ebapraktiline
 - Tavaliselt antakse tudengile võimalus koodi parandada
@@ -131,6 +131,21 @@
  - Funktsioonid, klassid, meetodid jms peavad olema kommenteeritud
   - Sisu kontrollime ka ("asd" võib automaattesterile sobida, aga õppejõule mitte!)
  - Automaattester annab stiilivigadest teada
+
+@ulend
+
+---
+
+## Süvapython
+
+@ul
+
+- Mõne jaoks on tavaülesanded igavad
+- Pakume võimalust lahendada keerukamaid ülesandeid
+- Kokku semestri jooksul 8 ülesannet
+- Nende eest saab kokku 100p
+- "5" saamiseks tuleb neid lahendada
+- Teemadest räägime paaris teisipäeval kell 10.00
 
 @ulend
 
