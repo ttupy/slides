@@ -168,16 +168,17 @@
 
 ---
 
-## Tunnikontrollid
+## Tunnikontroll, Kontrolltöö
 
 @ul
 
-* 5 nädalal tunnikontroll (15-20min)
+* 5 nädalal tunnikontroll (TK)
   * antakse 5 ülesannet
   * vähemalt üks tuleb ära teha (20%)
-  * vaadake codingbat.com pigem 1 taseme ülesanded
-* 10 nädalal kontrolltöö (terve praktikum)
+  * 5p (PR ülesande asemel)
+* 10 nädalal kontrolltöö (KT)
   * vähemalt pool tuleb ära teha (50%)
+  * 20p (PR ja EX ülesande asemel)
 
 @ulend
 
@@ -191,7 +192,7 @@
  - vähemalt 200p
  - TK 20%, KT 50%
 - Eksam toimub arvutiga
-- Lahendatakse ülesandeid
+- Lahendatakse ülesandeid + *quiz*
 - Interneti kasutamine pole lubatud
 - Aega 4h
 
@@ -205,7 +206,7 @@
 * 2n funktsioon, matemaatilised avaldised
 * 3n sõne
 * 4n järjend, tsükkel
-* 5n sõnastik
+* 5n Tunnikontroll, sõnastik
 * 6n sõne, regulaaravaldised
 * 7n järjend, tsükkel jm kordamine
 * 8n failid (lugemine, kirjutamine), sortimine
@@ -216,7 +217,7 @@
 
 
 * 9n Rekursioon
-* 10n Objektid, klassid
+* 10n Kontrolltöö
 * 11n Objektid, klassid
 * 12n Objektid, klassid, pärimine
 * 13n Veebist lugemine
