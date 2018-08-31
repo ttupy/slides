@@ -23,7 +23,7 @@
 
 ## Konsultatsioon
 
-- Toimub ??
+- Toimub N10, ICT-637
 - Eelnevalt vaja registreerida (ained.ttu.ee kursuse lehel)
 - Konsultatsioonis räägime u 30 min eelneva nädala teemad üle
 - Saab küsida koduste ülesannete kohta
@@ -172,11 +172,11 @@
 
 @ul
 
-* 5 nädalal tunnikontroll (TK)
+* 5\. nädalal tunnikontroll (TK)
   * antakse 5 ülesannet
   * vähemalt üks tuleb ära teha (20%)
   * 5p (PR ülesande asemel)
-* 10 nädalal kontrolltöö (KT)
+* 10\. nädalal kontrolltöö (KT)
   * vähemalt pool tuleb ära teha (50%)
   * 20p (PR ja EX ülesande asemel)
 
