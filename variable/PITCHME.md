@@ -80,9 +80,9 @@ picture_height, picture_width = picture_width, picture_height
 
 ```
 
-@[2](Määrame uue väärtuse, kasutades vana väärtust. Mis on uus väärtus?)
+@[1-2](Määrame uue väärtuse, kasutades vana väärtust. Mis on uus väärtus?)
 @[3](Pyhonis saab määraata mitmele muutujale väärtuse kooraga)
-@[4-5](Arvutame pildi + raami suurused. Muutujate väärtused asendatakse väärtustega arvutamise hetkeks)
+@[4-5](Arvutame pildi + raami suurused. Muutujad asendatakse väärtustega arvutamise hetkeks)
 @[6](Siin vahetatakse muutujate väärtused)
 
 ---
@@ -107,3 +107,9 @@ print(type(meaningful_variable))  # <class 'float'>
 @[1-3](Muutujale omistatakse täisarv, tüüp on klass ``int``)
 @[5-7](Samale muutujale omistame sõne ehk teksti, tüüp on klass ``str``)
 @[9-11](Muutujale omistatakse jagatise tulemus, mis on ujukomaarv, tüüp on klass ``float``)
+
+---
+
+## Viited
+
+- https://ained.ttu.ee/pydoc/variable.html
