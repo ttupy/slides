@@ -16,13 +16,13 @@
 
 ## Projekti väljad
 
-@snap[east sidebar]
-![Project form](gitlab-conf/project_form.png)
-@snapend
+- ``Project name`` määra ``iti0102-2018``
+- ``Visibility level`` peab jääma ``private``
+- ``Create project``
 
-@snap[west]
-- ``Project name`` määra ``iti0102-2018``, ``Visibility level`` peab jääma ``private``
-@snapend
+---
+
+![Project form](gitlab-conf/project_form.png)
 
 ---
 
