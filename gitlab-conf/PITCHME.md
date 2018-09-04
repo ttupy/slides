@@ -15,6 +15,12 @@
 
 ---
 
+![Add project](gitlab-conf/new_project.png)
+
+![Project form](project_form.png)
+
+---
+
 ## Tehtud
 
 - Kes tahab, võib kasutada Giti lahenduste üleslaadimiseks
