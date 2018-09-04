@@ -1,4 +1,4 @@
-## ITI0101 - Programmeerimise algkursus
+## ITI0102 - Programmeerimise algkursus
 #### Loeng 1 - Korraldus
 
 ---
