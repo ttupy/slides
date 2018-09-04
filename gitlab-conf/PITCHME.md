@@ -9,13 +9,14 @@
  - võid kasutajanimena kasutada ``uniid`` või ``uniid@ttu.ee``
  - kui parooli ei tea: https://pass.ttu.ee
 - Roheline nupp @color[green](``New project``)
-- ``Project name`` määra ``iti0102-2018``
-- ``Visibility level`` peab jääma ``private``
-- ``Create project``
+
+![Add project](gitlab-conf/new_project.png)
 
 ---
 
-![Add project](gitlab-conf/new_project.png)
+## Projekti väljad
+
+- ``Project name`` määra ``iti0102-2018``, ``Visibility level`` peab jääma ``private``
 
 ![Project form](gitlab-conf/project_form.png)
 
