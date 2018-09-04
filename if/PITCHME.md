@@ -89,9 +89,8 @@ if a > 4:
 Mis on väljund?
 
 @ul
-- ```
-on nii
-ja ei ole```
+- on nii
+- ja ei ole
 @ulend
 
 ---
@@ -110,8 +109,7 @@ if a > 4:
 Mis on väljund?
 
 @ul
-- ```
-ja ei ole```
+- ja ei ole
 @ulend
 
 ---
