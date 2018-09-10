@@ -71,6 +71,7 @@ hello_name("Guido")
  - kui funktsioon lõppeb, jätkatakse eelnevalt poolelijäänud realt
 
 @div[left-50 fragment]
+
 ```python
 print("Start")
 hello()
@@ -78,9 +79,11 @@ print("Between")
 hello_name("Karumõmm")
 print("End")
 ```
+
 @divend
 
 @div[right-50 fragment]
+
 ```
 Start
 Hello world!
@@ -88,6 +91,7 @@ Between
 Hello, Karumõmm
 End
 ```
+
 @divend
 
 ---
