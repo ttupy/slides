@@ -120,7 +120,7 @@ s = triangle_area(10, 10)
 print(s)
 ```
 
-@[1](Defineeritakse funktsioon, mis saab kaks väärtust - algus ja kõrgus)
+@[1](Defineeritakse funktsioon, mis saab kaks väärtust - alus ja kõrgus)
 @[2](Funktsioon tagastab kolmnurga pindala)
 @[4](Funktsiooni väljakutsudes saab tulemuseks arvutatud pindala, see pannakse muutujasse)
 
@@ -176,15 +176,15 @@ def get_university_name(abbreviation):
 
 ## Miks kasutada funktsioone?
 
-@ul
+@ul[many-items]
 
 - DRY - _don't repeat yourself_
  - korduva koodi asemel kasuta funktsiooni
  - funktsionaalsuse muutumise korral piisab ühe funktsiooni muutmisest
 - Abstraktsioon
  - funktsiooni kasutaja ei pea teadma, kuidas funktsioon täpselt töötab
- -võimaldab suure programmi jagada alamülesanneteks, mida võivad lahendada erinevad inimesed
--Testimine
+ - võimaldab suure programmi jagada alamülesanneteks, mida võivad lahendada erinevad inimesed
+- Testimine
  - Kui programmis on vaid üks funktsioon main, saame testides teada, et probleem on kusagil selle funktsiooni sees
  - Kui programm on jagatud funktsioonideks, on võimalik igat funktsiooni eraldi testida
  - Sedasi saame vea asukoha ja põhjuse täpsemini tuvastada
@@ -211,19 +211,25 @@ def get_university_name(abbreviation):
 
 ## Veel...
 
+@ul
 - Koodi on lihtsam kirjutada kui lugeda
 - Hea programmeerija mõtleb sellele, et tema kood oleks hiljem ka teiste poolt loetav
  - võrdle juturaamatuga, hea autor on üldiselt see, kes suudab end lugejale selgeks teha
  - see ei tähenda, et iga rea juurde tuleks mitu rida kommentaari kirjutada
  - pigem on muutujad/funktsioonid/meetodid arusaadavalt nimetatud ja struktureeritud
+@ulend
 
 ---
 
 ## ``return`` _vs_ ``print()``
 
+@ul
+
 - ``return`` on spetsiifiline funktsiooni korraldus, mis tagastab funktsiooni tulemuse
 - ``print()`` on lihtsalt üks korraldus (funktsioon), mida saab funktsiooni sisus kasutada (ja ka mujal)
  - samamoodi võib funktsioon näiteks kirjutada faili, saata emaili vms.
+
+@ulend
 
 ---
 
@@ -271,7 +277,8 @@ print(f"Area from function: {area}")
 ```
 
 @[6](``sleep()`` ei ole vajalik, aga tekitab "vinge" efekti, nagu pindala arvutatakse pikalt)
-@[3-10](See funktsioon tagastab pindala, aga lisaks sellele prinditakse jooksvalt teksti ekraanile. See on näide, kuidas ``print()`` korraldust võib funktsiooni sees kasutada, see midagi erilist ei tee. ``return`` aga lõpetab funktsiooni täitmise ära ja tagastab ``area`` väärtuse)
+@[3-10](See funktsioon tagastab pindala, aga lisaks sellele prinditakse jooksvalt teksti ekraanile.) 
+@[3-10](See on näide, kuidas ``print()`` korraldust võib funktsiooni sees kasutada, see midagi erilist ei tee. ``return`` aga lõpetab funktsiooni täitmise ära ja tagastab ``area`` väärtuse)
 
 ---
 
