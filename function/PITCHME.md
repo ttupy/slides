@@ -397,8 +397,9 @@ print(th(1, 2))
 
 - Anonüümne funktsioon on ilma nimeta funktsioon
  - kasutatakse lühikeste ja/või ühekordseks kasutamisek mõeldud funktsioonide kirjeldamisel
-
 - Kirjeldatakse kujul: ``lambda args: [tagastatav tulemus]``
+- lambda funktsioonil ``return`` korraldust ei kirjutata
+- argumendid ei ole sulgudes
 
 - See on samaväärne:
 @ulend
@@ -407,12 +408,6 @@ print(th(1, 2))
 def nimi(args):
     return [tagastatav tulemus]
 ```
-
-@ul[many-items]
-- lambda funktsioonil ``return`` korraldust ei kirjutata
-- argumendid ei ole sulgudes
-
-@ulend
 
 ---
 
@@ -430,8 +425,10 @@ print(th(10, 10))
 
 ## Anonüümne funktsioon (_lambda_)
 
+@ul[many-items]
 - lambda on funktsioon
 - Järgmises näites tagastab funktsioon ``make_incrementor`` uus funktsiooni, mida saab kasutada arvu suurendamiseks määratud suuruse võrra
+@ulend
 
 ```python
 def make_incrementor(n): return lambda x: x + n
