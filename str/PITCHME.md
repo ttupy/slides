@@ -24,6 +24,25 @@ text = 'example'
 text = """example"""
 text = '''example'''
 ```
+---
+
+## Mitmerealine sõne
+
+- Mitmerealise sõne loomine
+
+```python
+text = """This
+is
+multline
+string"""
+text = '''This
+too'''
+text = "This \n is \n also!"
+
+```
+@[1-4](Kolmekordsete jutumärkide vahel võib kasutada reavahetust - see on osa sõnest)
+@[5-6](Sama käib kolmekordsete ülakomade kohta)
+@[7](``\n`` tähistab reavahetust, see sõne on kolmerealine)
 
 ---
 

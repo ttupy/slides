@@ -11,6 +11,15 @@ text = "hello " + 'world'
 text = "hello ""world"
 print(text)
 
+text = """This
+is
+multline
+string"""
+text = '''This
+too'''
+text = "This \n is \n also!"
+print(text)
+
 # ----
 
 greeting = "Hello!"
