@@ -319,6 +319,155 @@ greet_animal("Mari", "Squirrel")  # Greetings Mari of type Squirrel
 
 ## Vaikeväärtusega parameetrid
 
+```python
+def greet_person(firstname, lastname, country="Estonia", phone=None, email=None):
+    print("Hi,", firstname, lastname)
+    print("You live in", country)
+    if phone: print("phone:", phone)
+    if email: print("email:", email)
+
+greet_person("Mati", "Kaal")
+
+greet_person("Kati", "Kaal", phone="112", email="kati@kaal.ee")
+
+greet_person("Donald", "Duck", "USA", "+1 202-456-1111", "president@usa.com")
+```
+@[1-5,7](Ainult ees- ja perenimi antakse funktsiooni kaasa)
+@[1-5,9](Riiki ei määrata, seega kasutatakse Eestit)
+@[1-5,11](Siin antakse kaasa väärtused iga parameetri jaoks)
+
+---
+
+## Veel parameetritest
+
+- `*args`
+ - funktsiooni kirjelduses enne vaikeväärtusega parameetreid ja peale nimega parameetreid
+ - järjend argumendi väärtustest
+ - väärtustatakse kõikide väärtustega, mis antakse funktsioonile kaasa ning mille kohta ei ole positsioonilist parameetrit
+- ``**kwargs``
+ - funktsiooni kirjelduses peale vaikseväärtusega parameetreid
+ - sõnastik (``dict``) argumentide võtmetest ja väärtustest
+ - sõnastikku pannakse need võtmega kaasa antud argumendid, mida pole defineeritud parameetrite seas
+
+---
+
+## Veel parameetritest
+
+```python
+def person_data(name, *args, country="Estonia", **kwargs):
+    print("Hi", name)
+    print("Country", country)
+    print("args:", args)
+    print("kwargs:", kwargs)
+    for key in kwargs:
+        print(key, "=>", kwargs[key])
+
+person_data("Pierre", "von", "Smith", age=15, city="Tallinn", country="Latvia")
+
+person_data("Pierre", middlename="von", lastname="Smith", age=15, city="Tallinn")
+```
+@[1-8,9](args = ('von', 'Smith'), kwargs = {'age': 15, 'city': 'Tallinn'})
+@[1-8,11](args = (), kwargs = {'middlename': 'von', 'lastname': 'Smith', 'age': 15, 'city': 'Tallinn'})
+
+---
+
+## Funktsioon muutujasse
+
+- Pythonis võib funktsiooni anda muutujasse
+ - sellisel juhul mitte ei käivitata funktsiooni ja ei tagastata selle tulemust (nagu tavalise väljakutse puhul):
+ ```python
+area = triangle_area(10, 10)
+print(area)
+```
+ - vaid määratakse funktsioni nimi (ilma sulgude ja argumentideta) muutujasse:
+ ```python
+th = triangle_area
+print(th(1, 2))
+```
+ 
+---
+
+## Anonüümne funktsioon(_lambda_)
+
+- Anonüümne funktsioon on ilma nimeta funktsioon
+ - kasutatakse lühikeste ja/või ühekordseks kasutamisek mõeldud funktsioonide kirjeldamisel
+ 
+- Kirjeldatakse kujul: ``lambda args: [tagastatav tulemus]``
+
+- See on samaväärne:
+```python
+def nimi(argumendid):
+    return [tagastatav tulemus]
+```
+
+- lambda funktsioonil ``return`` korraldust ei kirjutata
+- argumendid ei ole sulgudes
+
+---
+
+## Anonüümne funktsioon (_lambda_)
+
+- Näiteks kolmnurga pindala valem
+- Määrame lambda funktsiooni muutujasse, et saaksime seda hiljem kasutada
+
+```python
+th = lambda a, h: a * h / 2
+print(th(10, 10))
+
+```
+---
+
+## Anonüümne funktsioon (_lambda_)
+
+- lambda on funktsioon
+- Järgmises näites tagastab funktsioon ``make_incrementor`` uus funktsiooni, mida saab kasutada arvu suurendamiseks määratud suuruse võrra
+
+```python
+def make_incrementor(n): return lambda x: x + n
+
+inc10 = make_incrementor(10)
+inc5 = make_incrementor(5)
+
+print(inc10(10))  # 20
+print(inc5(10))   # 15
+```
+
+@[1](Funktsioon tagastab funktsiooni, mis võtab argumendi ``x`` ning suurendab seda ``n`` võrra)
+@[1-4](Loome kaks funktsiooni, üks suurendab oma argumenti 10, teine 5 võrra)
+@[1-7](Kasutame loodud funktsioone: suurendame argumenti 10 algul 10, siis 5 võrra)
+
+---
+
+## filter()
+
+- Võimaldab rakendada filtreerimisfunktsiooni järjendi peal
+ - funktsiooniosa kirjeldatakse tavaliselt lambdaga (aga võib olla ka tavaline funktsioon)
+ - elemendid, mille korral funktsioon tagastab ``True``, satuvad tulemusse
+ 
+```python
+nums = [1, 3, 14, 27, 15, 100, 151, 9, 2]
+filtered = filter(lambda x: x % 3 == 0 or x % 5 == 0, nums)
+print(list(filtered))
+```
+@[1](Loome listi ``nums``)
+@[1-2](Rakendame listile filtrit, mis valib 3 ja 5-ga jaguvad arvud)
+@[1-3](Tulemus pannakse objekti ``filtered``, selle teisendame listiks ja prindime välja)
+
+---
+
+## map()
+
+- Võimaldab rakendada funktsiooni järjendi elementide peal
+
+```python
+nums = [1, 3, 14, 27, 15, 100, 151, 9, 2]
+mapped = map(lambda x: x * 2, nums)
+print(list(mapped))
+```
+
+@[1](Loome listi)
+@[1-2](Rakendame listi igale elemendile lambda funktsiooni (korrutame väärtuse kahega))
+@[1-3](Kuvame tulemuse. map() tagastab objekti, `list()` teisendab selle listiks)
 
 ---
 
@@ -366,6 +515,22 @@ greet_animal("Mari", "Squirrel")  # Greetings Mari of type Squirrel
  - see ei tähenda, et iga rea juurde tuleks mitu rida kommentaari kirjutada
  - pigem on muutujad/funktsioonid/meetodid arusaadavalt nimetatud ja struktureeritud
 @ulend
+
+---
+
+## Soovitusi
+
+- Funktsiooni pikkus võiks jääda 10-15 rea vahele
+- Enne, kui hakkad päriselt ülesannet lahendama (detailselt), proovi paika panna struktuur
+ - jaga põhifunktsioonis (nt ``check_id_code()``) tehtav teiste väiksemate funktsioonide vahel
+ - nt ``check_gender()``, ``check_month()`` jne 
+- Kui struktuur paigas, hakka alamülesandeid (funktsioone lahendama)
+
+```python
+def check_id_code(code):
+    check_gender(code)
+    check_month(code)
+```
 
 ---
 
