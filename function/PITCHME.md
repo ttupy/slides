@@ -301,7 +301,7 @@ print_full_name(lastname="Kaal", name="Mati")
 ## Vaikeväärtusega parameetrid
 
 - Funktsiooni kirjelduses võib parameetrile määrata vaikeväärtuse
- - kui funktsiooni väljakutsmisel sinna väärtust ei määrata, kasutatakse vaikeväärtust
+ - kui funktsiooni väljakutsumisel sinna väärtust ei määrata, kasutatakse vaikeväärtust
  
 ```python
 def greet_animal(name, type="Human"):
@@ -383,7 +383,7 @@ person_data("Pierre", middlename="von", lastname="Smith", age=15, city="Tallinn"
 area = triangle_area(10, 10)
 print(area)
 ```
- - vaid määratakse funktsioni nimi (ilma sulgude ja argumentideta) muutujasse:
+ - vaid määratakse funktsiooni nimi (ilma sulgude ja argumentideta) muutujasse:
  ```python
 th = triangle_area
 print(th(1, 2))
@@ -427,7 +427,7 @@ print(th(10, 10))
 
 @ul[many-items]
 - lambda on funktsioon
-- Järgmises näites tagastab funktsioon ``make_incrementor`` uus funktsiooni, mida saab kasutada arvu suurendamiseks määratud suuruse võrra
+- Järgmises näites tagastab funktsioon ``make_incrementor`` uue funktsiooni, mida saab kasutada arvu suurendamiseks määratud suuruse võrra
 @ulend
 
 ```python
