@@ -340,6 +340,8 @@ greet_person("Donald", "Duck", "USA", "+1 202-456-1111", "president@usa.com")
 
 ## Veel parameetritest
 
+@ul[many-items]
+
 - `*args`
  - funktsiooni kirjelduses enne vaikeväärtusega parameetreid ja peale nimega parameetreid
  - järjend argumendi väärtustest
@@ -348,6 +350,8 @@ greet_person("Donald", "Duck", "USA", "+1 202-456-1111", "president@usa.com")
  - funktsiooni kirjelduses peale vaikseväärtusega parameetreid
  - sõnastik (``dict``) argumentide võtmetest ja väärtustest
  - sõnastikku pannakse need võtmega kaasa antud argumendid, mida pole defineeritud parameetrite seas
+
+@ulend
 
 ---
 
@@ -389,6 +393,8 @@ print(th(1, 2))
 
 ## Anonüümne funktsioon(_lambda_)
 
+@ul[many-items]
+
 - Anonüümne funktsioon on ilma nimeta funktsioon
  - kasutatakse lühikeste ja/või ühekordseks kasutamisek mõeldud funktsioonide kirjeldamisel
  
@@ -396,12 +402,14 @@ print(th(1, 2))
 
 - See on samaväärne:
 ```python
-def nimi(argumendid):
+def nimi(args):
     return [tagastatav tulemus]
 ```
 
 - lambda funktsioonil ``return`` korraldust ei kirjutata
 - argumendid ei ole sulgudes
+
+@ulend
 
 ---
 
