@@ -397,15 +397,18 @@ print(th(1, 2))
 
 - Anonüümne funktsioon on ilma nimeta funktsioon
  - kasutatakse lühikeste ja/või ühekordseks kasutamisek mõeldud funktsioonide kirjeldamisel
- 
+
 - Kirjeldatakse kujul: ``lambda args: [tagastatav tulemus]``
 
 - See on samaväärne:
+@ulend
+
 ```python
 def nimi(args):
     return [tagastatav tulemus]
 ```
 
+@ul[many-items]
 - lambda funktsioonil ``return`` korraldust ei kirjutata
 - argumendid ei ole sulgudes
 
