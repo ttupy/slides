@@ -81,7 +81,7 @@ print(greeting[1:-1])  # ello
 @[1-2](Kantsulgudega saab määrata, millist elementi (sümbolit) küsime)
 @[1-2](**Indeksid algavad 0-st!** St esimene täht on indeksiga 0 jne)
 @[1,4-5](Lõik [algus:lõpp], algusindeks on kaasa arvatud, lõppindeks ei ole kaasa arvatud)
-@[1,7-8](Kasutada saab negatiivseid indekseid, neid lendatakse tagantpoolt)
+@[1,7-8](Kasutada saab negatiivseid indekseid, neid loendatakse tagantpoolt)
 
 ---
 
