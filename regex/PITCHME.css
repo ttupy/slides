@@ -1,8 +1,13 @@
-.good {
+.match {
     color: #00AA00;
 }
 
-.bad {
+.match-u {
+    color: #00AA00;
+    text-decoration: underline;
+}
+
+.nomatch {
     color: #FF0000;
 }
 

@@ -39,3 +39,17 @@ Muster: `"abc"`
 Sisalduv tekst: `"abc"`
 
 Mittesisalduv tekst: `"ababac"`
+
+---
+
+## Suvaline sümbol
+
+- vastab ühele suvalisele sümbolile
+
+Muster: `.`
+
+Näide: `"a.bc"`
+
+Sisalduv tekst: @css[match](`"`)@css[match-u](`a2bc`)@css[match](`a"`)
+
+Mittesisalduv tekst: `"abc"`
