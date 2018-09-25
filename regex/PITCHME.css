@@ -1,4 +1,9 @@
 
+.pat {
+    font-weight: bold;
+    background-color: #CCCCCC;
+}
+
 .match {
     color: #00AA00;
 }
