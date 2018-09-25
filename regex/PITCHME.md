@@ -287,9 +287,9 @@ Mittesisalduv tekst: @css[nomatch](`"`)@css[nomatch-u](`b`)@css[nomatch](`cd"`)
 
 - Võimaldab grupeerida pikema alammustri
 
-Muster: `(...)`
+Muster: @css[pat]((test\)`(...&#41;`)
 
-Näide: `"(ab)?cd"`
+Näide: `"`@css[u](`(ab&#41;?cd`)`"`
 
 Sisalduv tekst: @css[match](`"a`)@css[match-u](`cd`)@css[match](`e"`)
 
@@ -643,7 +643,7 @@ for email in re.finditer(r"[\w.-]+@[\w.-]+", text):
 - https://docs.python.org/3/library/re.html
 - https://developers.google.com/edu/python/regular-expressions
 - http://rise4fun.com/Rex
-  - näiteks "(ab|cd)?cd"
+  - näiteks `(ab|cd)?cd`
 - https://regex101.com/
 - https://regexone.com/
 - https://alf.nu/RegexGolf
