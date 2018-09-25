@@ -15,7 +15,6 @@
 ## `re` moodul
 
 ```python
-
 import re
 
 match = re.search("abc", "aabca")
@@ -26,10 +25,13 @@ print(match is None)  # no match
 ```
 
 @[3](Otsitakse mustrit "abc" tekstist "aabca")
-
+@[3-4](`re.search()` tagastab `Match` objekti, kus on täiendav info sees.)
+@[5-6](Kui mustrit ei leita tekstist, tagastatakse `None`.)
 ---
 
 ## Muster
+
+@ul[many-items]
 
 - Muster koosneb metamärkidest (erilise tähendusega sümbolid) ja tavalistest sümbolitest (otsese tähendusega)
 - Muster võib koosnevad teistest (alam)mustritest
@@ -39,6 +41,8 @@ print(match is None)  # no match
 - Mustrit saab kasutada:
  - et kontrollida, kas mingi sõne vastab reeglitele / mustrile (kas email on korrektne)
  - leida üles mingile mustrile vastav sõne (näiteks kõik emailid)
+
+@ulend
 
 ---
 
@@ -190,7 +194,7 @@ Mittesisalduv tekst: @css[nomatch](`"aa`)@css[nomatch-u](`bbb`)@css[nomatch](`cc
 
 Muster: @css[pat](`{m,n}`)
 
-Näide: `"a`@css[u](`a{2,3}`)`c"`
+Näide: `"a`@css[u](`b{2,3}`)`c"`
 
 Sisalduv tekst: @css[match](`"aa`)@css[match-u](`bb`)@css[match](`cc"`)
 
@@ -283,7 +287,7 @@ Mittesisalduv tekst: @css[nomatch](`"`)@css[nomatch-u](`b`)@css[nomatch](`cd"`)
 
 - Võimaldab grupeerida pikema alammustri
 
-Muster: @css[pat](`(...)`)
+Muster: @css[pat](`(...\)`)
 
 Näide: `"`@css[u](`(ab)?cd`)`"`
 
@@ -424,9 +428,7 @@ Mittesisalduv tekst: @css[nomatch](`"ab ba"`)
 
 Muster: @css[pat](`\w`)
 
-Näide: `"`@css[u](`\w+a`)`"`
-
-Sama: `"`@css[u](`[a-zA-Z0-9_]+a`)`"`
+Näide: `"`@css[u](`\w+a`)`"` (`"`@css[u](`[a-zA-Z0-9_]+a`)`"`)
 
 Sisalduv tekst: @css[match](`"`)@css[match-u](`1a`)@css[match](`"`)
 
