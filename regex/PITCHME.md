@@ -287,7 +287,9 @@ Mittesisalduv tekst: @css[nomatch](`"`)@css[nomatch-u](`b`)@css[nomatch](`cd"`)
 
 - Võimaldab grupeerida pikema alammustri
 
-Muster: @css[pat]((test\)`(...&#41;`)
+@css[pat](parenthesis test (&#41;)
+
+Muster: @css[pat](`(...&#41;`)
 
 Näide: `"`@css[u](`(ab&#41;?cd`)`"`
 
