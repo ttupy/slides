@@ -37,3 +37,20 @@ match = re.search("(ab)?(cd)e", "acde")
 print(match.group())
 print(match.groups())
 
+import re
+
+m1 = re.match("c", "abcdef")
+m2 = re.search("c", "abcdef")
+
+print("Match" if m1 is not None else "No match")
+print("Match" if m2 is not None else "No match")
+
+import re
+text= "tere minu@email.ee, sõbra email on guido@baggins.com ja guits@bag.com"
+
+emails= re.findall(r"[\w.-]+@[\w.-]+", text)
+for email in emails:
+    print(email)
+
+for email in re.finditer(r"[\w.-]+@[\w.-]+", text):
+    print(email.group())

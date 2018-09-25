@@ -287,9 +287,9 @@ Mittesisalduv tekst: @css[nomatch](`"`)@css[nomatch-u](`b`)@css[nomatch](`cd"`)
 
 - Võimaldab grupeerida pikema alammustri
 
-Muster: @css[pat]((test\)`(...\)`)
+Muster: `(...)`
 
-Näide: `"`@css[u](`(ab)?cd`)`"`
+Näide: `"(ab)?cd"`
 
 Sisalduv tekst: @css[match](`"a`)@css[match-u](`cd`)@css[match](`e"`)
 
@@ -309,7 +309,7 @@ Mittesisalduv tekst: @css[nomatch](`"`)@css[nomatch-u](`d`)@css[nomatch](`de"`)
 
 Muster: @css[pat](`|`)
 
-Näide: `"`@css[u](`(ab|cd)+ef`)`"`
+Näide: `"(ab|cd)+ef"`
 
 Sisalduv tekst: @css[match](`"`)@css[match-u](`abef`)@css[match](`g"`)
 
@@ -338,9 +338,9 @@ Mittesisalduv tekst: @css[nomatch](`"abbef"`)
 
 - Alammuster peab järgnema
 
-Muster: @css[pat](`(?=...)`)
+Muster: `(?=...)`
 
-Näide: `"`@css[u](`a(?=b)`)`"`
+Näide: `"a(?=b)"`
 
 Sisalduv tekst: @css[match](`"a`)@css[match-u](`a`)@css[match](`b"`)
 
@@ -354,9 +354,9 @@ Mittesisalduv tekst: @css[nomatch](`"aa"`)
 
 - Alammuster ei tohi järgneda
 
-Muster: @css[pat](`(?!...)`)
+Muster: `(?!...)`
 
-Näide: `"`@css[u](`a(?!b)`)`"`
+Näide: `"a(?!b)"`
 
 Sisalduv tekst: @css[match](`"`)@css[match-u](`a`)@css[match](`c"`)
 
@@ -372,9 +372,9 @@ Mittesisalduv tekst: @css[nomatch](`"b"`)
 
 - Alammuster peab eelnema
 
-Muster: @css[pat](`(?<=...)`)
+Muster: `(?<=...)`
 
-Näide: `"`@css[u](`(?<=a)b`)`"`
+Näide: `"(?<=a)b"`
 
 Sisalduv tekst: @css[match](`"aa`)@css[match-u](`b`)@css[match](`c"`)
 
@@ -388,9 +388,9 @@ Mittesisalduv tekst: @css[nomatch](`"acb"`)
 
 - Alammuster ei tohi eelnema
 
-Muster: @css[pat](`(?<!...)`)
+Muster: `(?<!...)`
 
-Näide: `"`@css[u](`(?<!a)b`)`"`
+Näide: `"(?<!a)b"`
 
 Sisalduv tekst: @css[match](`"`)@css[match-u](`b`)@css[match](`c"`)
 
@@ -408,7 +408,7 @@ Mittesisalduv tekst: @css[nomatch](`"aab"`)
 
 Muster: @css[pat](`\1, \2`)
 
-Näide: `"`@css[u](`(.+) \1`)`"`
+Näide: `"(.+) \1"`
 
 Sisalduv tekst: @css[match](`"`)@css[match-u](`a a`)@css[match](`c"`)
 
@@ -592,4 +592,58 @@ print(match.groups())
 @[1-4](Kõik grupid, mis algavad `(?`, ei tagasta vastet)
 @[1-5](Tagastab enniku kõikidest vastetest. Antud juhul `('cd',)`)
 @[1-8](Tagastab kogu vaste (ka väljaspool gruppe). Tulemus: `cde`.)
-@[1-8](Tagastab enniku. Esimesele grupile vastet ei leidu. Tulemus: `(None, 'cd')`)
+@[1-9](Tagastab enniku. Esimesele grupile vastet ei leidu. Tulemus: `(None, 'cd')`)
+
+---
+
+## `match()` vs `search()`
+
+- `match()` otsib sõne algusest
+- `search()` otsib tervest sõnest
+
+```python
+import re
+
+m1 = re.match("c", "abcdef")
+m2 = re.search("c", "abcdef")
+
+print("Match" if m1 is not None else "No match")
+print("Match" if m2 is not None else "No match")
+```
+
+@[1-6](Prindib `No match`)
+@[1-7](Prindib `Match`)
+
+---
+
+## `findall()`
+
+- `findall()` tagastab mittkattuvate vastete (sõnede) järjendi
+- `finditer()` tagastab iteraatori `Match` objektidest
+
+```python
+import re
+text = "tere minu@email.ee, sõbra email on guido@baggins.com ja guits@bag.com"
+
+emails = re.findall(r"[\w.-]+@[\w.-]+", text)
+for email in emails:
+    print(email)
+
+for email in re.finditer(r"[\w.-]+@[\w.-]+", text):
+    print(email.group())
+```
+
+@[1-6](`emails` on järjend kõikidest vastetest)
+@[1-9](`finditer()` tagastab iteraatori (elemente tagastatakse jooksvalt vastavalt vajadusele))
+
+---
+
+## Viiteid
+
+- https://docs.python.org/3/library/re.html
+- https://developers.google.com/edu/python/regular-expressions
+- http://rise4fun.com/Rex
+  - näiteks "(ab|cd)?cd"
+- https://regex101.com/
+- https://regexone.com/
+- https://alf.nu/RegexGolf
