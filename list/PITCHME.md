@@ -1,6 +1,6 @@
 ## ITI0102 - Programmeerimise algkursus
-### Järjend, ennik
-#### _list_, _tuple_
+### Järjend, ennik, hulk
+#### _list_, _tuple_, _set_
 
 ---
 
