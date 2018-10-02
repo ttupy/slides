@@ -10,9 +10,7 @@
 - Sõnastikus (_dict_) saab kasutada võtmena suvalisi arve ja sõnesid
  - täpsemalt kõiki muutumatuid (_immutable_) andmetüüpe
 - Kasutatakse vastavuste loomiseks
-- Sõnastiku indeksit nimetatakse võtmeks
-- Indeksile/võtmele vastavat väärtust nimetatakse väärtuseks
-- Sõnastik koosneb võti-väärtus paaridest
+- Sõnastik koosneb võti-väärtus (indeks-väärtus) paaridest
 
 ---
 
@@ -96,3 +94,49 @@ print(training['friday']['morning']) # => yoga
 training['thursday'] = {'night': 'powersleep'}
 ```
 
+---
+
+## Näide
+
+```python
+phones = {'politsei': '110', 'päästeamet': '112'}
+print(phones)  # {'politsei': '110', 'päästeamet': '112'}
+# one concrete element
+print(phones['politsei'])  # 110
+# add TTÜ phone
+phones['ttü'] = '620 2002'
+print(phones)  # {'politsei': '110', 'päästeamet': '112', 'ttü': '620 2002'}
+
+# remove element
+del phones['politsei']
+
+print(phones)  # {'päästeamet': '112', 'ttü': '620 2002'}
+
+```
+
+---
+
+## Näide
+
+```python
+for name, phonenumber in phones.items():
+    print(name, phonenumber)
+
+for name in phones:
+    print(name, phones[name])
+
+for day, day_dict in training.items():
+    print(f"|{f'Training for {day}': ^24}|")
+    for time, activity in day_dict.items():
+        print(f"| {time: >9} | {activity: <11}|")
+```
+
+@[1-5](Kaks tsüklit prindivad täpselt sama tulemuse)
+@[7-10](Koostab tabeli treeningutest)
+
+---
+
+## Viited
+
+- https://ained.ttu.ee/pydoc/dict.html
+- https://docs.python.org/3.7/tutorial/datastructures.html#dictionaries

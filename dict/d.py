@@ -40,3 +40,37 @@ training = {
     'friday': {'morning': 'yoga'}}
 print(training['friday']['morning']) # => yoga
 training['thursday'] = {'night': 'powersleep'}
+
+
+phones = {'politsei': '110', 'päästeamet': '112'}
+print(phones)  # {'politsei': '110', 'päästeamet': '112'}
+# one concrete element
+print(phones['politsei'])  # 110
+# add TTÜ phone
+phones['ttü'] = '620 2002'
+print(phones)  # {'politsei': '110', 'päästeamet': '112', 'ttü': '620 2002'}
+
+# remove element
+del phones['politsei']
+
+print(phones)  # {'päästeamet': '112', 'ttü': '620 2002'}
+
+# all (key, value) pairs
+print(phones.items())
+# all values
+print(phones.values())
+# all keys
+print(phones.keys())
+
+for name, phonenumber in phones.items():
+    print(name, phonenumber)
+
+for name in phones:
+    print(name, phones[name])
+
+for day, day_dict in training.items():
+    print(f"|{f'Training for {day}': ^24}|")
+    for time, activity in day_dict.items():
+        print(f"| {time: >9} | {activity: <11}|")
+
+    
