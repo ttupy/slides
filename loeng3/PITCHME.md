@@ -66,6 +66,12 @@
 
 ---
 
+## Kahoot
+
+Kahoot!
+
+---
+
 ## Kordamine
 
 @ul
@@ -78,3 +84,9 @@
 - Järjend
 
 @ulend
+
+---
+
+## Viiteid
+
+- https://ained.ttu.ee/pydoc/references.html
