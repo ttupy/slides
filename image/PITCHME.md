@@ -20,7 +20,7 @@
 - Vali "Pillow" pakett
 - "Install package"
  
-![Install package](image/packages.png)
+![Install package](image/install_package.png)
 
 ---
 
