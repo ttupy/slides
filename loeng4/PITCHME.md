@@ -17,6 +17,58 @@
 
 ---
 
+![Raskus](loeng4/ylesannete_raskus.png)
+
+---
+
+![Areng](loeng4/areng.png)
+
+---
+
+![Ülesanded huvitavad](loeng4/ylesanded_huvitavad.png)
+
+---
+
+![Parim ülesanne](loeng4/ylesanne_parim.png)
+
+---
+
+![Halvim ülesanne](loeng4/ylesanne_halvim.png)
+
+---
+
+![Korraldus arusaadav](loeng4/korraldus_arusaadav.png)
+
+---
+
+![Info jõuab tudengini](loeng4/info_jouab_tudengini.png)
+
+---
+
+![Esitamine toimib](loeng4/esitamine_toimib.png)
+
+---
+
+![Loeng](loeng4/loeng.png)
+
+---
+
+![Pydoc](loeng4/pydoc.png)
+
+---
+
+![Abiõppejõud](loeng4/abioppejoud.png)
+
+---
+
+![Positiivne](loeng4/cloud_pos.png)
+
+---
+
+![Negatiivne](loeng4/cloud_neg.png)
+
+---
+
 ## Negatiivne
 
 @ul
