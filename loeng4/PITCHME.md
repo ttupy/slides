@@ -59,10 +59,15 @@
 
 ![Abiõppejõud](loeng4/abioppejoud.png)
 
----?image=loeng/cloud_neg.png&size=contain
+---?image=loeng4/cloud_neg.png&size=contain
 
----?image=loeng/cloud_pos.png&size=contain
+##
 
+---?image=loeng4/cloud_pos.png&size=contain
+
+##
+
+--
 
 ## Negatiivne
 
