@@ -19,6 +19,7 @@
 ![MANDELBROT](fractal/Benoit_Mandelbrot.jpg)
 @snapend
 
+@ul[small](false)
 - Poola sündinud prantsuse-ameerika matemaatik
 - Fraktalite avastaja
 - Arvutite areng on otseselt seotud fraktalite avastamisega – Mandelbrot kasutas arvutigraafikat fraktaalsete geomeetriliste kujundite loomiseks ja kuvamiseks
@@ -27,6 +28,7 @@
  - pilved
  - kaldajoon
  - galaktikate jaotus (?) (vt _fractal cosmology_)
+@ulend
 
 ---
 
