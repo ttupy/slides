@@ -66,6 +66,8 @@
 
 ## Mengeri käsn
 
+![MENGER](Menger_sponge.jpg)
+
 ---
 
 ## Sierpinski kolmnurk
@@ -110,7 +112,7 @@ if __name__ == "__main__":
 
 ---
 
-## Itereeritud funktsioonisüsteem - mis on tulemus?
+## Itereeritud funktsioonisüsteem
 
 ```python
 from PIL import Image
@@ -140,7 +142,7 @@ if __name__ == "__main__":
 
 ---
 
-## Barnsley sõnajalg
+## Barnsley<br/>sõnajalg
 
 @snap[west barnsley]
 ![BARN1](fractal/barnsley_fern_plotted.png)
@@ -159,7 +161,9 @@ if __name__ == "__main__":
 - Avastati aastal 1992 (M. Michelitsch ja O. Rössler)
 - https://en.wikipedia.org/wiki/Burning_Ship_fractal
 
+@snap[south ship]
 ![SHIP1](fractal/ship_fractal.png)
+@snapend
 
 ---
 
@@ -202,26 +206,29 @@ Julia hulgad
 
 @snap[south]
 `Z(n) = Z(n-1) ^2 + C`
-
+<br/>
 C - kompleksarvuline parameeter, mis määrab fraktali kuju
 @snapend
 
 ---
 
-## Julia hulgad
-
+@snap[north]
 `c = 0.285 + 0.01i`
+@snapend
 
+@snap[midpoint julia]
 ![JULIA2](fractal/Julia_0.285_0.01.png)
+@snapend
 
 ---
 
-## Julia hulgad
-
+@snap[north]
 `c = -0.7269 + 0.1889i` 
+@snapend
 
+@snap[midpoint julia]
 ![JULIA3](fractal/1024px-Julia_-0.7269_0.1889.png)
-
+@snapend
 
 ---
 

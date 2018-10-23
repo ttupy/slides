@@ -4,6 +4,7 @@
 }
 .sierpinski {
     width: 25%;
+    right: -100px;
 }
 
 .barnsley {
@@ -25,4 +26,8 @@
 
 .reveal section img {
     border: 0;
+}
+
+.ship {
+    width: 25%;
 }
