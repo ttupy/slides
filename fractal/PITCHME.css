@@ -13,3 +13,8 @@
 .julia {
     width: 50%;
 }
+
+.south {
+    left: 40%;
+    transform: translateX(-40%);
+}

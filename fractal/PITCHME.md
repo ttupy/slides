@@ -191,7 +191,7 @@ if __name__ == "__main__":
 ---
 
 @snap[north]
-## Julia hulgad
+Julia hulgad
 @snapend
 
 @snap[midpoint julia]
@@ -208,17 +208,18 @@ C - kompleksarvuline parameeter, mis määrab fraktali kuju
 
 ## Julia hulgad
 
-![JULIA2](fractal/Julia_0.285_0.01.png)
-
 `c = 0.285 + 0.01i`
+
+![JULIA2](fractal/Julia_0.285_0.01.png)
 
 ---
 
 ## Julia hulgad
 
+`c = -0.7269 + 0.1889i` 
+
 ![JULIA3](fractal/1024px-Julia_-0.7269_0.1889.png)
 
-`c = -0.7269 + 0.1889i` 
 
 ---
 
