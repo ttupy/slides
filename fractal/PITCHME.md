@@ -13,7 +13,7 @@
 
 ---
 
-## Benoit Mandelbrot (1924 - 2010)
+## Benoit Mandelbrot <br/>(1924 - 2010)
 
 @snap[north-east mandelbrot]
 ![MANDELBROT](fractal/Benoit_Mandelbrot.jpg)
