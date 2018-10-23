@@ -16,7 +16,7 @@
 ## Benoit Mandelbrot (1924 - 2010)
 
 @snap[north-east mandelbrot]
-![MANDELBROT](Benoit_Mandelbrot.jpg)
+![MANDELBROT](fractal/Benoit_Mandelbrot.jpg)
 @snapend
 
 - Poola sündinud prantsuse-ameerika matemaatik
@@ -32,25 +32,25 @@
 
 ## Theory of roughness - mäed
 
-![MOUNT](Mountain_Fractal.jpg)
+![MOUNT](fractal/Mountain_Fractal.jpg)
 
 ---
 
 ## Theory of roughness - rannajoon
 
-![SHORE](fractal_shoreline.jpg)
+![SHORE](fractal/fractal_shoreline.jpg)
 
 ---
 
 ## Theory of roughness - jääkristall
 
-![ICE](fractal_ice_crystal.jpg)
+![ICE](fractal/fractal_ice_crystal.jpg)
 
 ---
 
 ## Theory of roughness - Romanesco
 
-![ROMAN](fractal_romanesco.jpg)
+![ROMAN](fractal/fractal_romanesco.jpg)
 
 ---
 
@@ -58,7 +58,7 @@
 
 - Külgede arv: N(i) = N(i-1) * 4^i
 
-![KOCH](koch_500.png)
+![KOCH](fractal/koch_500.png)
 
 ---
 
@@ -77,7 +77,7 @@
 6. Korda alates punktist 3.
 
 @snap[north-east sierpinski]
-![SIERPINSKI](sierpinski.png)
+![SIERPINSKI](fractal/sierpinski.png)
 @snapend
 
 ---
@@ -141,36 +141,36 @@ if __name__ == "__main__":
 ## Barnsley sõnajalg
 
 @snap[west barnsley]
-![BARN1](barnsley_fern_plotted.png)
+![BARN1](fractal/barnsley_fern_plotted.png)
 @snapend
 
 @snap[east barnsley]
-![BARN2](barnsley.png)
+![BARN2](fractal/barnsley.png)
 @snapend
 
 ---
 
 ## Põleva laeva fraktaal
 
-![SHIPFORM](ship_formula.png)
+![SHIPFORM](fractal/ship_formula.png)
 
 - Avastati aastal 1992 (M. Michelitsch ja O. Rössler)
 - https://en.wikipedia.org/wiki/Burning_Ship_fractal
 
-![SHIP1](ship_fractal.png)
+![SHIP1](fractal/ship_fractal.png)
 
 ---
 
 ## Põleva laeva fraktaal
 
-![SHIP2](ship_fractal_big.jpg)
+![SHIP2](fractal/ship_fractal_big.jpg)
 
 ---
 
 ## _Escape-time fractals_
 
 @snap[east]
-![XY](xy_plot.png)
+![XY](fractal/xy_plot.png)
 @snapend
 
 @ul[small]
@@ -192,7 +192,7 @@ if __name__ == "__main__":
 
 ## Julia hulgad
 
-![JULIA1](julia_set_general.png)
+![JULIA1](fractal/julia_set_general.png)
 
 `Z(n) = Z(n-1) ^2 + C`
 
@@ -202,7 +202,7 @@ C - kompleksarvuline parameeter, mis määrab fraktali kuju
 
 ## Julia hulgad
 
-![JULIA2](Julia_0.285_0.01.png)
+![JULIA2](fractal/Julia_0.285_0.01.png)
 
 `c = 0.285 + 0.01i`
 
@@ -210,7 +210,7 @@ C - kompleksarvuline parameeter, mis määrab fraktali kuju
 
 ## Julia hulgad
 
-![JULIA3](1024px-Julia_-0.7269_0.1889.png)
+![JULIA3](fractal/1024px-Julia_-0.7269_0.1889.png)
 
 `c = -0.7269 + 0.1889i` 
 
@@ -218,7 +218,7 @@ C - kompleksarvuline parameeter, mis määrab fraktali kuju
 
 ## Julia hulgad ja Mandelbroti hulk
 
-![MANDELJULIA](julias-and-mandelbrot.jpg)
+![MANDELJULIA](fractal/julias-and-mandelbrot.jpg)
 
 ---
 
