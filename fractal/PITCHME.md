@@ -190,13 +190,19 @@ if __name__ == "__main__":
 
 ---
 
+@snap[north]
 ## Julia hulgad
+@snapend
 
+@snap[midpoint julia]
 ![JULIA1](fractal/julia_set_general.png)
+@snapend
 
+@snap[south]
 `Z(n) = Z(n-1) ^2 + C`
 
 C - kompleksarvuline parameeter, mis määrab fraktali kuju
+@snapend
 
 ---
 
