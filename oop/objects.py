@@ -139,6 +139,7 @@ p4.x = 11
 p4.print_point()   # (11.00, 3.00)
 p5.print_point()   # (11.00, 3.00)
 
+print(p5)
 
 class Point2D:
     """Point in (x, y) coordinate space)."""
@@ -154,6 +155,10 @@ class Point2D:
             return self.x == other.x and self.y == other.y
         return False
 
+    def __str__(self):
+        return f"({self.x:.2f}, {self.y:.2f})"
+p1 = Point2D(1, 2)
+print(p1)   # (1.00, 2.00)
 
 p6 = Point2D(1, 2)
 p7 = Point2D(1, 2)
@@ -172,7 +177,7 @@ class Doorbell:
         self.click_count = 0
 
     def ring(self):
-        print("Ringing..")
+        #print("Ringing..")
         self.click_count += 1
         Doorbell.click_count += 1
 
@@ -181,6 +186,18 @@ d2 = Doorbell()
 
 for _ in range(10): d1.ring()
 for _ in range(4): d2.ring()
-print(d1.click_count)
-print(d2.click_count)
-print(Doorbell.click_count)
+print(d1.click_count)         # 10
+print(d2.click_count)         # 4
+print(Doorbell.click_count)   # 14
+
+
+class Point3D(Point2D):
+    def __init__(self, x, y, z):
+        super().__init__(x, y)
+        self.z = z
+
+    def __str__(self):
+        return f"({self.x:.2f}, {self.y:.2f}, {self.z:.2f})"
+
+p3d = Point3D(1, 2, 3)
+print(p3d)     # (1.00, 2.00)

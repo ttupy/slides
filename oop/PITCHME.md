@@ -37,6 +37,17 @@
 
 ---
 
+## OOP tehnikad
+
+- Kapseldamine (_encapsulation_)
+ - funktsionaalsus peidetakse
+- Modulaarsus (_modularity_)
+ - programm jagatakse iseseisvateks tükkideks
+- Polümorfism (_polymorphism_)
+ - alamklass saab meetodeid üle kirjutada
+- Pärimine (_inheritance_)
+ - alamklass pärib omadused ja meetodid
+
 ## Sõne
 
 - Sõne on objekt
@@ -178,12 +189,12 @@ s.hello()       # no "self" argument
 
 ## `self`
 
-- Kõik objekti muutujad sisaldavad esimest parameetrit `self`
+- Kõik objekti meetodid sisaldavad esimest parameetrit `self`
  - selle parameetri nimi võib ka midagi muud olla; kasutage `self`
 - `self` viitab isendile
 - Eelmises näites oli väljakutse `s.hello()`
  - kui `hello()` meetod käima pannakse, antakse sellele `s` kaasa
-- Meetodi jaoks vajalike väärtust jaoks lisatakse need peale `self` parameetrit
+- Meetodi jaoks vajalike väärtuste jaoks lisatakse need peale `self` parameetrit
 
 ---
 
@@ -237,7 +248,7 @@ s = Student()  # Initializing student..
 - Konstruktorisse saab kaasa anda argumente (nagu tavaline funktsioon)
 - Esimene parameeter on alati `self`
 - Objekti muutujad on seotud ühe konkreetse objektiga (isendiga)
-- Objekti muutujaid saab väärtustada: `self.name = ...`
+- Objekti muutujaid väärtustatakse: `self.name = ...`
 - Tavaliselt luuakse konstruktoris vajalikud väljad ära
 - Objekti muutujaid saab teistes objekti meetodites kasutada
 
@@ -411,7 +422,7 @@ class Point2D:
 ```
 @[1-7](Konstruktor ja `print_point` meetodid on näitest välja jäätud)
 @[4](Kirjeldame `__eq__` meetodi, mis käivitatakse objektide võrdlemisel)
-$[4-7](`isinstance` kontrollib, kas `other` on üldse `Point2D` tüüpi. Kui ei ole, siis ei saa punkt ka `other` objektiga võrdne olla)
+@[4-7](`isinstance` kontrollib, kas `other` on üldse `Point2D` tüüpi. Kui ei ole, siis ei saa punkt ka `other` objektiga võrdne olla)
 @[4-7](Kui `other` on `Point2D` tüüpi, siis võrreldakse `self` ja `other` objekti `x` ja `y` koordinaate.)
 
 ---
@@ -433,6 +444,26 @@ print(p6 is p8)   # True
 @[1-4](Võrdleme nüüd kahte objekti `==` võrdlusega. Tulemus on tõene, kuna käivitub `__eq__` meetod, mis võrdleb sisu.)
 @[1-5](Kui on vaja võrrelda, kas kaks muutujat viitavad samale isendile, siis kasutada `is` võrdlust)
 @[1-8](Kuna `p8` viitab samale objektil kui `p6`, siis võrdlus `p6 is p8` annab tulemuseks `True`)
+
+---
+
+## Objekt sõnena
+
+- `__str__(self)` meetod võimaldab kirjeldada, mida objekti puhul sõnena tagastatakse
+- Näiteks printimisel kasutatakse seda
+- Samuti `str(obj)` puhul.
+- Meetod tagastab sõne
+- Vaikimisi `print(p1)` kuvab midagi sellist `<__main__.Point2D object at 0x0050D5D0>`.
+
+```python
+class Point2D:
+    # ...
+    def __str__(self):
+        return f"({self.x:.2f}, {self.y:.2f})"
+        
+p1 = Point2D(1, 2)
+print(p1)           # (1.00, 2.00)
+```
 
 ---
 
@@ -465,12 +496,100 @@ d2 = Doorbell()
 
 for _ in range(10): d1.ring()
 for _ in range(4): d2.ring()
-print(d1.click_count)
-print(d2.click_count)
-print(Doorbell.click_count)
+print(d1.click_count)         # 10
+print(d2.click_count)         # 4
+print(Doorbell.click_count)   # 14
 ```
 
+@[12, 13](Loome kaks uksekella `d1` ja `d2`)
+@[15,16](Helistame esimest 10 ja teiset 4 korda.)
+@[1-10](Klassi muutuja ja objekti muutuja võivad sama nimega olla - need ei lähe omavahel segamini.)
+@[1-10](Klassi muutuja on seotud klassiga, objekti muutuja iga objektiga.)
+@[1-10](`ring()` meetodis suurendame konkreetse uksekella vajutamiste arvu `self.click_count += 1`.)
+@[1-10](Ühtlasi muudame klassi muutujat `Doorbell.click_count += 1`.)
+
+
 ---
+
+## Pärimine
+
+- Klass võib pärida osa (või kõiki) atribuute (omadusi ja meetodeid) teistelt klassidelt
+- Näiteks klass "loom" omab üldisi atribuute looma kohta (näiteks käppade, jalgade, käte arv; meetodid "söö", "tee häält")
+- Klass "koer" võib pärida kõik klassi "loom" atribuudid
+- Liksa võib "koer" klassis:
+ - täiendavaid atribuute lisada (näiteks "kas haugub")
+ - mõne meetodi üle kirjutada ("tee häält" teeb haukumise häält)
+- Pärimise kohta öeldakse ka laiendamine
+
+---
+
+## Pärimine
+
+```python
+class Point3D(Point2D):
+    def __init__(self, x, y, z):
+        super().__init__(x, y)
+        self.z = z
+        
+p3d = Point3D(1, 2, 3)
+print(p3d)     # (1.00, 2.00)
+```
+
+@[1](Klass `Point3D` laiendab klassi `Point2D`.)
+@[1-4](`super()` pöördub ülemklassi (st `Point2D`) poole. Siin kutsutakse välja `Point2D` konstruktor)
+@[1-7](Miks tulemus on (1.00, 2.00)?)
+
+---
+
+## Pärimine
+
+- Kui pöördume objekti meetodi/muutuja poole, siis:
+ - kõigepealt otsitakse meetodit/muutujat objekti klassist
+ - kui objekti klassis seda ei leidu, otsitakse ülemklassist
+ - kui ülemklassist ei leidu, siis ülemklassi ülemklassist jne
+
+- Seega, kui alamklassis sama nimega meetod kirjutda, "peidab" see ülemklassi meetodi ära
+
+```python
+class Point2D:
+    # ...
+    def __str__(self):
+        return f"({self.x:.2f}, {self.y:.2f})"
+```
+@[1-4](Kuna `Point3D` klassis pole `__str__` meetodit, pöördutakse ülemklassi ehk `Point2D` poole.)
+
+---
+
+## Pärimine
+
+```python
+class Point3D(Point2D):
+    def __init__(self, x, y, z):
+        super().__init__(x, y)
+        self.z = z
+
+    def __str__(self):
+        return f"({self.x:.2f}, {self.y:.2f}, {self.z:.2f})"
+
+p3d = Point3D(1, 2, 3)
+print(p3d)     # (1.00, 2.00, 3.00)
+```
+
+@[6-7](Lisame siia `__str__` meetodi.)
+@[1-10](Nüüd kuvatakse õige tulemus)
+
+---
+
+## Nimetamine
+
+- Klassi nimes kasutatakse reeglina _Upper Camel Case_ formaadis (sõnad kokku kirjutatud, iga sõna algab suure tähega):
+ - `AlmightyRobot`, `MapObject`
+ - Erindid on klassid, seega tuleb neid samamoodi nimetada: `NoMoreMoves`, `PrincessException`
+- Meetodi nimi väikeste tähtedega, sõnade vahel alakriips: `get_area()`
+- Meetodid ja muutujad, mis algavad alakriipsuga, pole mõeldud avalikuks kasutamiseks (n-ö privaatsed).
+ - `_internal_counter`, `_calculate_raw_price()`
+- Kaks alakriipsu on veel rangem "soovitus"
+  - kuigi Python lubab neid kasutada ka väljaspool objekti
 
 ---
 
