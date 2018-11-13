@@ -43,8 +43,12 @@
 - Kui loote uue sõne, siis tegelikult luuakse uus objekt, mille tüüp on `str`.
 - Sõne "funktsioone" kutsutakse meetoditeks
  - ehk siis klassis kirjeldatud funktsioonid on meetodid
+
+---
+
+## Sõne
  
- ```python
+```python
 s = "Hello"
 print(type(s))  # <class 'str'>
 print(id(s))  # 30773472
@@ -102,7 +106,7 @@ print(type(type))  # <class 'type'>
 - Ühest klassist saab luua lõpmata palju objekte
 - Objekti kohta öeldakse ka isend ja instants
  - Üldiselt mõeldakse "objekt", "isend", "instants" terminitega samu asju
- - Erinevates allikates võivad neil mingid erinevused olla
+ - Erinevates allikates võivad neil erinevused olla
  - Siin aines kasutame termineid objekt ja isend.
  
 ---
@@ -125,7 +129,7 @@ print(id(t))    # 12423408
 ```
 @[1-2](Kirjeldame ära klassi. `pass` ei tee midagi, see on vajalik tühja sisu puhul (nt funktsioonis, if-lauses jne). Klassil on nimi `Student`)
 @[1-5](Loome uue isendi e objekti)
-@[1-10](Loome teise isendi. Kuigi need isendid on ühte tüüpi, on nende `id` erinev, ehk mälus kahes kohas)
+@[1-10](Loome teise isendi. Kuigi need isendid on ühte tüüpi, on nende `id` erinev, ehk nad paiknevad mälus erinevates kohtades)
 
 ---
 
@@ -168,3 +172,309 @@ s.hello()       # no "self" argument
 @[4](Meetodil on eriline parameeter `self`, millest räägime hiljem. Seda ei pea välja kutsudes kaasa andma.)
 @[1-10](Loome objekti muutujasse `s` ja kutsume objektil välja meetodi `hello()`.)
 @[1-10](Nagu näha, siin argumenti kaasa ei anna. )
+@[1-10](`Student` on klass, `s` on objekt (loodud `Student` klassist).)
+
+---
+
+## `self`
+
+- Kõik objekti muutujad sisaldavad esimest parameetrit `self`
+ - selle parameetri nimi võib ka midagi muud olla; kasutage `self`
+- `self` viitab isendile
+- Eelmises näites oli väljakutse `s.hello()`
+ - kui `hello()` meetod käima pannakse, antakse sellele `s` kaasa
+- Meetodi jaoks vajalike väärtust jaoks lisatakse need peale `self` parameetrit
+
+---
+
+## `self` ja parameetrid
+
+```python
+class Student:
+    def greet_friend(self, friend_name):
+        print(f"Hello, {friend_name}")
+
+s = Student()
+s.greet_friend("Kaia")
+```
+
+@[1-2](Meetodi kirjelduses esimesel kohal on `self`, teisel kohal `friend_name`.)
+@[1-6](Kui kutsume välja `greet_friend` meetodit, siis esimesena kaasa antud argument läheb teise parameetrisse jne.)
+
+---
+
+## Konstruktor
+
+- Objekti loomisel pannakse käima eriline meetod ehk konstruktor
+- Meetod kirjeldatakse: `__init__(self)`
+- See meetod pannakse käima üks kord objekti loomisel
+- Eelnevas näites `s = Student()` kutsub välja konstruktori
+- Konstruktori kirjeldamine ei ole kohustuslik
+- Konstruktor peab tagastama `None` (eraldi `return` lauset ei kirjutata).
+
+---
+
+## Konstruktor
+
+- Kirjeldatakse nagu tavaline meetod
+- Eraldi pole vaja välja kutsuda
+
+```python
+class Student:
+    def __init__(self):
+        print("Initializing student..")
+
+s = Student()  # Initializing student..
+```
+
+@[1-5](`Student()` kutsub `Student` klassi konstruktori välja.)
+
+---
+
+## Konstruktor, objekti muutujad 
+
+- `self` viitab loodavale/loodud objektile
+- Konstruktorisse saab kaasa anda argumente (nagu tavaline funktsioon)
+- Esimene parameeter on alati `self`
+- Objekti muutujad on seotud ühe konkreetse objektiga (isendiga)
+- Objekti muutujaid saab väärtustada: `self.name = ...`
+- Tavaliselt luuakse konstruktoris vajalikud väljad ära
+- Objekti muutujaid saab teistes objekti meetodites kasutada
+
+---
+
+## Konstruktor, objekti muutujad 
+
+```python
+class Student:
+    def __init__(self, name, title):
+        self.name = name
+        self.title = title
+
+ago = Student("Ago", "Sir")
+print(ago.name)
+
+leela = Student("Leela", "Captain")
+print(leela.title)
+```
+@[1-4](Konstruktori parameeter `self` viitab objektile.)
+@[1-4](Parameetrid `name` ja `title` salvestatakse objekti muutujateks: `self.name` ja `self.title`)
+@[1-7](Loome isendi Ago. Sellel puhul määratakse objekti külge nimi ja tiitel. Saame välja printida nime.)
+@[1-4,9-10](Loome isendi Leela, kelle jaoks anname teised argumendid.)
+
+---
+
+## Objekti muutujad
+
+```python
+class Shop:
+    def __init__(self, name, age, products_file=None):
+        self.products = []
+        self.name = name
+        self.established = 2018 - age
+        if products_file is not None:
+            # open the file and read products from it
+            pass
+
+    def inventory(self):
+        print(f"Inventory for {self.name} (est. {self.established}:")
+        for p in self.products:
+            print("product: ..")
+            pass
+```
+@[1-8](`name` muutuja salvestatakse objekti muutujaks)
+@[1-8](`age` muutuja kasutatakse `self.establishes` väärtuse arvutamiseks. Funktsiooni lõpus kaotab `age` kehtivuse.)
+@[1-8](`products_file` on valikuline parameeter. Kui see on määratud, siis loetakse failist tooted.)
+@[1-8](`self.products` luuakse siin tühja järjendina. Seal hakatakse hoidma kaupade nimekirja.)
+@[1,9-13](`self` kaudu loodud muutujad on siin kättesaadavad: `name`, `established` ja `products`.)
+
+---
+
+## Klass (_class_)
+
+- Defineerib andmetüübi
+- Šabloon, mida saab hiljem kasutada, et luua konkreetseid objekte (isendeid)
+
+```python
+class Point2D:
+    """Point in (x, y) coordinate space)."""
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def print_point(self):
+        print(f"({self.x:.2f}, {self.y:.2f})")
+```
+@[1](Kirjeldab klassi `Point2D`)
+@[3](Konstruktor, pannakse käima objekti loomisel)
+@[3,7](Klassi funktsioonid ehk meetodid)
+
+---
+
+## Objekt (_object_)
+
+- Konkreetne isend, instants (_instance_)
+- Luuakse klassi kirjeldusest
+- Klassist võib luua lõpmata palju objekte
+- Samast klassist loodud objektid on sarnase struktuuriga (neil on samad meetodid ja muutujad)
+- Aga igal objektil on oma olek (muutujate väärtused)
+
+```python
+p1 = Point2D(1.234, 0.23456)
+p2 = Point2D(-1, 3)
+
+p1.print_point()   # (1.23, 0.23)
+p2.print_point()   # (-1.00, 3.00)
+```
+
+---
+
+## Klass ja objekt
+
+```python
+class Point2D:
+    """Point in (x, y) coordinate space)."""
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def print_point(self):
+        print(f"({self.x:.2f}, {self.y:.2f})")
+
+
+p1 = Point2D(1.234, 0.23456)
+p2 = Point2D(-1, 3)
+
+p1.print_point()   # (1.23, 0.23)
+p2.print_point()   # (-1.00, 3.00)
+```
+
+@[1-8](Klassi kirjeldus)
+@[3](`__init__` on eriline meetod, mis käivitatakse objekti loomisel.)
+@[3](`self` on esimene parameeter ja viitab objektile.)
+@[4,5,8](`self.x` ja `self.y` on objekti (isendi) muutujad.)
+@[11-12](Loome kaks objekti `p1` ja `p2` erinevate väärtustega.)
+@[11-15](Mõlemal objektil on oma olek. Ühe oleku muutumine ei mõjuta teist.)
+
+---
+
+## Objektide võrdlemine
+
+```python
+p3 = Point2D(3, 3)
+p4 = Point2D(3, 3)
+p5 = p4
+
+print(p3 == p4)   # False
+print(p4 == p5)   # True
+
+p3.x = 10
+p3.print_point()   # (10.00, 3.00)
+
+p4.x = 11
+p4.print_point()   # (11.00, 3.00)
+p5.print_point()   # (11.00, 3.00)
+```
+@[1-3](Loome 2 isendit `p3` ja `p4`. `p5 = p4` tähistab seda, et `p5` viitab samale isendile kui `p4` )
+@[1-5](Kuigi `p3` ja `p4` väärtused on samad, siis `==` võrdlusel kontrollitakse vaikimisi, kas kaks isendit on samad (viitavad samale objektile))
+@[1-6](Kuna `p5` ja `p4` viitavad samale isendile, siis siin on tulemus tõene.)
+@[1-9](Muudame `p3.x` väärtust, vaid sellel isendil muutub `x` väärtus.)
+@[1-14](Muudame `p4.x` väärtust, `x` väärtus muutub nii `p4` kui `p5` jaoks. Miks?)
+
+---
+
+## Erilised meetodid
+
+- Python võimaldab klassis ära kirjeldada objekti käitumist erinevates olukordades
+- Näiteks `__eq__` meetodit kasutatakse selleks, et võrrelda objekte `==` võrdlusega
+- `__str__` meetodit kasutatakse, et saada objektist sõne kuju
+- Lisaks näiteks `__add__(self, other)` objektide liitmiseks jne
+- `__lt__(self, other)` väikem-kui võrdluseks
+- `__len__(self)` kui rakendatakse `len(self)`
+- jne
+
+---
+
+## Objektide võrdlus
+
+- Punkti puhul oleks mõistlik realiseerida objektide võrdlus väärtuste järgi
+- Kui kahel punktil on mõlemad koordinaadid samad, siis on ka objektid võrdsed.
+
+```python
+class Point2D:
+    # ...
+
+    def __eq__(self, other):
+        if isinstance(other, Point2D):
+            return self.x == other.x and self.y == other.y
+        return False
+```
+@[1-7](Konstruktor ja `print_point` meetodid on näitest välja jäätud)
+@[4](Kirjeldame `__eq__` meetodi, mis käivitatakse objektide võrdlemisel)
+$[4-7](`isinstance` kontrollib, kas `other` on üldse `Point2D` tüüpi. Kui ei ole, siis ei saa punkt ka `other` objektiga võrdne olla)
+@[4-7](Kui `other` on `Point2D` tüüpi, siis võrreldakse `self` ja `other` objekti `x` ja `y` koordinaate.)
+
+---
+
+## Objektide võrdlus
+
+```python
+p6 = Point2D(1, 2)
+p7 = Point2D(1, 2)
+
+print(p6 == p7)   # True
+print(p6 is p7)   # False
+
+p8 = p6
+print(p6 is p8)   # True
+
+```
+
+@[1-4](Võrdleme nüüd kahte objekti `==` võrdlusega. Tulemus on tõene, kuna käivitub `__eq__` meetod, mis võrdleb sisu.)
+@[1-5](Kui on vaja võrrelda, kas kaks muutujat viitavad samale isendile, siis kasutada `is` võrdlust)
+@[1-8](Kuna `p8` viitab samale objektil kui `p6`, siis võrdlus `p6 is p8` annab tulemuseks `True`)
+
+---
+
+## Klassi muutujad
+
+- Klassi muutuja kirjeldatakse klassi sees väljaspool meetodeid
+- Klassi muutujal on üks väärtus läbi terve programmi
+- Sõltumata sellest, mitu objekti klassis luuakse, klassi muutujal on üks ühine väärtus
+- Üldiselt ei ole vaja kasutada
+
+---
+
+## Klassi muutuja näide
+
+```python
+
+class Doorbell:
+    click_count = 0
+
+    def __init__(self):
+        self.click_count = 0
+
+    def ring(self):
+        print("Ringing..")
+        self.click_count += 1
+        Doorbell.click_count += 1
+
+d1 = Doorbell()
+d2 = Doorbell()
+
+for _ in range(10): d1.ring()
+for _ in range(4): d2.ring()
+print(d1.click_count)
+print(d2.click_count)
+print(Doorbell.click_count)
+```
+
+---
+
+---
+
+Viited:
+
+- https://ained.ttu.ee/pydoc/classes.html
+- https://docs.python.org/3/tutorial/classes.html
