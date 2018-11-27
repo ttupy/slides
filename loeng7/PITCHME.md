@@ -17,6 +17,7 @@
 - Eksamiajad välja ÕIS-is
  - ajad: 4. jaanuar, 9. jaanuar, 16. jaanuar
 - Algus kell 10:00
+- Kestab 5h
 
 
 ---
@@ -39,6 +40,14 @@
 - Rekursioon 50 p
 - Keerukam algoritmiline ülesanne 100 p
 - OOP 2 x 50 p = 100 p
+
+---
+
+## Eksam
+
+- Isikuttõendav dokument kaasa
+- Vajalik registreerida ÕIS-is hiljemalt eelmisel päeval kell 12:00
+- Päev enne eksamit konsultatsioon
 
 ---
 
