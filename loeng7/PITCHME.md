@@ -10,6 +10,14 @@
 
 ---
 
+## Teemad
+
+- Eksam
+- Tagasiside
+- Kahoot!
+
+---
+
 ## Eksam
 
 - Info väljas ained.ttu.ee lehel "Eksam" sektsioonis
