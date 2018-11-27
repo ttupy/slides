@@ -40,6 +40,59 @@
 - Keerukam algoritmiline ülesanne 100 p
 - OOP 2 x 50 p = 100 p
 
+---
+
+![Hinne](loeng7/hinne.png)
+
+---
+
+![Raskus](loeng7/raskus.png)
+
+---
+
+![Areng](loeng7/areng.png)
+
+---
+
+![Ülesanded huvitavad](loeng7/huvitav.png)
+
+---
+
+![Parim ülesanne](loeng7/parem_ex.png)
+
+---
+
+![Halvim ülesanne](loeng7/halvem_ex.png)
+
+---
+
+![Korraldus arusaadav](loeng7/korraldus_arusaadav.png)
+
+---
+
+![Info jõuab tudengini](loeng7/info.png)
+
+---
+
+![Esitamine toimib](loeng7/kaitsmine.png)
+
+---
+
+![Loeng](loeng7/loeng.png)
+
+---
+
+![Pydoc](loeng7/materjalid.png)
+
+---
+
+![Discord](loeng7/discord.png)
+
+---
+
+![Appi?](loeng7/appi.png)
+
+
 ---?image=loeng7/wordcloud_neg.png&size=contain
 
 ---?image=loeng7/wordcloud_pos.png&size=contain
