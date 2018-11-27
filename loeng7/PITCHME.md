@@ -15,7 +15,7 @@
 - Info väljas ained.ttu.ee lehel "Eksam" sektsioonis
 - Väljas ka näidiseksam (struktuur pole päris õige)
 - Eksamiajad välja ÕIS-is
- - 4. jaanuar, 9. jaanuar, 16. jaanuar
+ - ajad: 4. jaanuar, 9. jaanuar, 16. jaanuar
 - Algus kell 10:00
 
 
